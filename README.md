@@ -7,14 +7,8 @@
 
 #### Screenshot
 
-<p align="center">
-<img src="https://raw.githubusercontent.com/hasanozgan/theme-lambda/master/screenshot.png">
-</p>
+TODO
 
 #### Install
 
-##### Oh-My-Fish
-
-```fish
-omf install lambda
-```
+Clone this repo to your theme directory.
