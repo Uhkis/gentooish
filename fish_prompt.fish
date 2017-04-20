@@ -11,7 +11,7 @@ function fish_prompt
       case 0
   set -g __fish_prompt_char '#'
       case '*'
-  set -g __fish_prompt_char 'λ'
+  set -g __fish_prompt_char '%'
     end
   end
 
@@ -20,8 +20,8 @@ function fish_prompt
   set -l turquoise (set_color 5fdfff)
   set -l orange (set_color df5f00)
   set -l hotpink (set_color df005f)
-  set -l blue (set_color blue)
-  set -l limegreen (set_color 87ff00)
+  set -l blue (set_color 5555FF)
+  set -l green (set_color 00FF00)
   set -l purple (set_color af5fff)
 
   # Configure __fish_git_prompt
@@ -36,12 +36,12 @@ function fish_prompt
   set -g __fish_git_prompt_show_informative_status true
 
   # Line 1
-  echo -n $white'╭─'$hotpink$USER$white' at '$orange$__fish_prompt_hostname$white' in '$limegreen(pwd)$turquoise
+  echo -n $white$green$USER'@'$__fish_prompt_hostname$white' '$blue(pwd)$turquoise
   __fish_git_prompt " (%s)"
   echo
 
   # Line 2
-  echo -n $white'╰─'$__fish_prompt_char $normal
+  echo -n $white$__fish_prompt_char $normal
 end
 
 
